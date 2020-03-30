@@ -1,0 +1,67 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "masks_on_web",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/masks_on_web": {
+            "get": {
+                "tags": [
+                    "masks_on_web"
+                ],
+                "summary": "masks_on_web輸入樣式",
+                "description": "輸入畫面樣式如下,將要查的欄位輸入輸入匡,按下查詢即將使用者的請求到下方的masks_output中",
+                "operationId": "get_masks_on_web",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                }
+            }
+        },
+        "/masks_on_web/show": {
+            "get": {
+                "tags": [
+                    "masks_output"
+                ],
+                "summary": "masks_output輸出樣式",
+                "description": "輸出畫面如下,將讀取在masks_on_web上使用者輸入的請求表單,搜尋資料中符合該地址的字串進行輸出,並且對成人口罩數量進行降序排序",
+                "operationId": "getProjectById",
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "Input address",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:projects",
+                            "read:projects"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
