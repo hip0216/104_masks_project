@@ -24,7 +24,7 @@
 
 /**
  * @OA\Get(
- *      path="/masks_on_web/show",
+ *      path="/masks_on_web/show_result",
  *      operationId="getProjectById",
  *      tags={"masks_output"},
  *      summary="masks_output輸出樣式",
