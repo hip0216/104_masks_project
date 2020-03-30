@@ -6,5 +6,5 @@
 ##使用說明
 輸入畫面如下有一輸入框可供使用者輸入要查詢的地址,輸入後按下查詢送出
 ![image](https://github.com/hip0216/104_masks_project/blob/master/web_input_picture.png)
-輸入畫面如下以下是以高雄市作為輸出的範例
+輸入畫面如下以下是以高雄市作為輸出的範例,輸出後會以成人口罩剩餘數做降序排序
 ![image](https://github.com/hip0216/104_masks_project/blob/master/web_output_picture.png)
